@@ -1,0 +1,595 @@
+[
+	{
+		"id": "framework_la",
+		"type": "bionic",
+		"name": {"str": "Cybernetics Left Arm Frame" },
+		"description": "Your left arm has been modified to allow for further cybernetic enhancements. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star.",
+	},
+	{
+		"id": "framework_ra",
+		"type":"bionic",
+		"name": {"str":"Cybernetics Right Arm Frame"},
+		"description": "Your right arm has been modified to allow for further cybernetic enhancements. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star.",
+	},
+	{
+		"id": "framework_h",
+		"type" : "bionic",
+		"name": {"str":"Cybernetics Head Frame"},
+		"description": "Your head has been modified to allow for further cybernetic enhancements. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star."
+	},
+	{
+		"id": "framework_rl",
+		"type": "bionic",
+		"name": {"str":"Cybernetics Right Leg Frame"},
+		"description" : "Your right leg has been modified to allow for further cybernetic enhancements. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star."
+	},
+	{
+		"id": "framework_ll",
+		"type": "bionic",
+		"name": {"str":"Cybernetics Left Leg Frame"},
+		"description" : "Your left leg has been modified to allow for further cybernetic enhancements. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star."
+	},
+	{
+		"id": "framework_t",
+		"type": "bionic",
+		"name": {"str": "Cybernetics Torso Frame"},
+		"description": "Your torso has been modified to allow for further cybernetic enhancements. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star."
+	},
+	{
+		"type": "bionic",
+		"id":"bio_adrenaline",
+		"copy-from":"bio_adrenaline",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_wings",
+		"copy-from":"bio_wings",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_alarm",
+		"copy-from":"bio_alarm",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_armor_arms",
+		"copy-from":"bio_armor_arms",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_armor_eyes",
+		"copy-from":"bio_armor_eyes",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_armor_head",
+		"copy-from":"bio_armor_head",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_armor_legs",
+		"copy-from":"bio_armor_legs",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_armor_torso",
+		"copy-from":"bio_armor_torso",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_blade",
+		"copy-from":"bio_blade",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_monowire",
+		"copy-from":"bio_monowire",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_shotgun",
+		"copy-from":"bio_shotgun",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_blood_filter",
+		"copy-from":"bio_blood_filter",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_cable_mkII",
+		"copy-from":"bio_cable_mkII",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_carbon",
+		"copy-from":"bio_carbon",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_chain_lightning",
+		"copy-from":"bio_chain_lightning",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_claws",
+		"copy-from":"bio_claws",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_climate",
+		"copy-from":"bio_climate",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_cloak",
+		"copy-from":"bio_cloak",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_cqb",
+		"copy-from":"bio_cqb",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_dex_enhancer",
+		"copy-from":"bio_dex_enhancer",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_digestion",
+		"copy-from":"bio_digestion",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_emp_armgun",
+		"copy-from":"bio_emp_armgun",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_ethanol",
+		"copy-from":"bio_ethanol",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_evap",
+		"copy-from":"bio_evap",
+		"starting_bionic": true
+	},{
+		"type": "bionic",
+		"id":"bio_eye_enhancer",
+		"copy-from":"bio_eye_enhancer",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_eye_optic",
+		"copy-from":"bio_eye_optic",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_face_mask",
+		"copy-from":"bio_face_mask",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_faraday",
+		"copy-from":"bio_faraday",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_fingerhack",
+		"copy-from":"bio_fingerhack",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_flashbang",
+		"copy-from":"bio_flashbang",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_geiger",
+		"copy-from":"bio_geiger",
+		"starting_bionic": true
+	},
+	{
+		"id": "bio_power_storage_mkIII",
+		"type": "bionic",
+		"name": { "str": "Power Storage Mk. III" },
+		"capacity": "500 kJ",
+		"description": "A Compact Bionics Module that increases your power capacity by 500 kJ.",
+		"flags": [ "BIONIC_NPC_USABLE", "MULTIINSTALL", "BIONIC_SHOCKPROOF" ],
+		"starting_bionic": true,
+		"points": 2
+	},
+	{
+    "id": "bio_power_storage_mkIII",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str_sp": "Power Storage CBM Mk. III" },
+    "looks_like": "bio_int_enhancer",
+    "description": "A Compact Bionics Module developed at DoubleTech Industries as a replacement for the highly successful Power Storage CBM.  Increases the user's power capacity by 500 units.",
+    "price": "10 kUSD",
+    "weight": "50 g",
+    "difficulty": 1,
+    "installation_data": "AID_bio_power_storage_mkII"
+  },
+	{
+		"type": "bionic",
+		"id":"bio_ears",
+		"copy-from":"bio_ears",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_gills",
+		"copy-from":"bio_gills",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_ground_sonar",
+		"copy-from":"bio_ground_sonar",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_heat_absorb",
+		"copy-from":"bio_heat_absorb",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_heatsink",
+		"copy-from":"bio_heatsink",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_hydraulics",
+		"copy-from":"bio_hydraulics",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_infrared",
+		"copy-from":"bio_infrared",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_int_enhancer",
+		"copy-from":"bio_int_enhancer",
+		"starting_bionic": true
+	},{
+		"type": "bionic",
+		"id":"bio_laser",
+		"copy-from":"bio_laser",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_leukocyte",
+		"copy-from":"bio_leukocyte",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_lockpick",
+		"copy-from":"bio_lockpick",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_magnet",
+		"copy-from":"bio_magnet",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_membrane",
+		"copy-from":"bio_membrane",
+		"starting_bionic": true
+	},{
+		"type": "bionic",
+		"id":"bio_memory",
+		"copy-from":"bio_memory",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_metabolics",
+		"copy-from":"bio_metabolics",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_nanobots",
+		"copy-from":"bio_nanobots",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_night",
+		"copy-from":"bio_night",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_night_vision",
+		"copy-from":"bio_night_vision",
+		"starting_bionic": true
+	},{
+		"type": "bionic",
+		"id":"bio_ods",
+		"copy-from":"bio_ods",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_painkiller",
+		"copy-from":"bio_painkiller",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_power_armor_interface",
+		"copy-from":"bio_power_armor_interface",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_power_armor_interface_mkII",
+		"copy-from":"bio_power_armor_interface_mkII",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_probability_travel",
+		"copy-from":"bio_probability_travel",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_purifier",
+		"copy-from":"bio_purifier",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_radscrubber",
+		"copy-from":"bio_radscrubber",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_railgun",
+		"copy-from":"bio_railgun",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_recycler",
+		"copy-from":"bio_recycler",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_remote",
+		"copy-from":"bio_remote",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_resonator",
+		"copy-from":"bio_resonator",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_scent_mask",
+		"copy-from":"bio_scent_mask",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_synaptic_regen",
+		"copy-from":"bio_synaptic_regen",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_shock",
+		"copy-from":"bio_shock",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_shockwave",
+		"copy-from":"bio_shockwave",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_speed",
+		"copy-from":"bio_speed",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_str_enhancer",
+		"copy-from":"bio_str_enhancer",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_surgical_razor",
+		"copy-from":"bio_surgical_razor",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_targeting",
+		"copy-from":"bio_targeting",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_teleport",
+		"copy-from":"bio_teleport",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_time_freeze",
+		"copy-from":"bio_time_freeze",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_tools",
+		"copy-from":"bio_tools",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_torsionratchet",
+		"copy-from":"bio_torsionratchet",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_jointservo",
+		"copy-from":"bio_jointservo",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_uncanny_dodge",
+		"copy-from":"bio_uncanny_dodge",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_underwater_propellers",
+		"copy-from":"bio_underwater_propellers",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_ups",
+		"copy-from":"bio_ups",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_water_extractor",
+		"copy-from":"bio_water_extractor",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_fuel_cell_hydrogen",
+		"copy-from":"bio_fuel_cell_hydrogen",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_reactor",
+		"copy-from":"bio_reactor",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_advreactor",
+		"copy-from":"bio_advreactor",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_atomic_battery",
+		"copy-from":"bio_atomic_battery",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_weight",
+		"copy-from":"bio_weight",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_shock_absorber",
+		"copy-from":"bio_shock_absorber",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_soporific",
+		"copy-from":"bio_soporific",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bn_bio_solar",
+		"copy-from":"bn_bio_solar",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"afs_bio_missiles",
+		"copy-from":"afs_bio_missiles",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"afs_bio_linguistic_coprocessor",
+		"copy-from":"afs_bio_linguistic_coprocessor",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"afs_bio_dopamine_stimulators",
+		"copy-from":"afs_bio_dopamine_stimulators",
+		"starting_bionic": true
+	},{
+		"type": "bionic",
+		"id":"bio_blaster",
+		"copy-from":"bio_blaster",
+		"starting_bionic": true
+	},
+	{
+		"type": "bionic",
+		"id":"bio_electrosense",
+		"copy-from":"bio_electrosense",
+		"starting_bionic": true
+	}
+]

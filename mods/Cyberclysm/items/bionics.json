@@ -1,0 +1,68 @@
+[
+	{
+    "id": "framework_la",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "Cybernetics Left Arm Frame CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "The framework for a cybernetic left arm. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star.",
+    "price": "40 USD",
+    "weight": "250 g",
+    "difficulty": 6
+  },
+  {
+    "id": "framework_ra",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "Cybernetics Righ Arm Frame CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "The framework for a cybernetic right arm. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star.",
+    "price": "40 USD",
+    "weight": "250 g",
+    "difficulty": 6
+  },
+  {
+    "id": "framework_h",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "Cybernetics Righ Arm Frame CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "The framework for a cybernetic head attachments. Originally designed by DoubleTech Inc., the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star.",
+    "price": "40 USD",
+    "weight": "250 g",
+    "difficulty": 6
+  },
+  {
+    "id": "framework_rl",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "Cybernetics Righ Leg Frame CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "The framework for a cybernetic right leg. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star.",
+    "price": "40 USD",
+    "weight": "250 g",
+    "difficulty": 6
+  },
+  {
+    "id": "framework_ll",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "Cybernetics Righ Arm Frame CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "The framework for a cybernetic left leg. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star.",
+    "price": "40 USD",
+    "weight": "250 g",
+    "difficulty": 6
+  },
+  {
+    "id": "framework_t",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "Cybernetics Righ Arm Frame CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "The framework for a torso. Originally designed by DoubleTech Inc. as a prosthetic, the cybernetic limb has been reversed engineered by many other corporations, including FireFly and Black Star.",
+    "price": "40 USD",
+    "weight": "250 g",
+    "difficulty": 6
+  },
+]

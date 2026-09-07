@@ -1,0 +1,14 @@
+[
+{
+	"type": "MONSTER_FACTION",
+	"name": "black_star" ,
+},
+{
+	"type": "MONSTER_FACTION",
+	"name": "firefly" 
+},
+{
+	"type": "MONSTER_FACTION",
+	"name": "doubletech"
+}
+]

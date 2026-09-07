@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "Cyberclysm",
+    "name": "Cyberclysm: Bright Nights",
+    "authors": [ "Pax" ],
+    "description": "Turns Bright Nights into a cyberpunk world. Recommend that you use alongside Bionic Slots.",
+    "category": "content",
+    "dependencies": [ "bn"]
+  }
+]
