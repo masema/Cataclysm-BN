@@ -73,6 +73,7 @@
       [ "welding_book", 10 ],
       [ "welding_mask", 30 ],
       [ "jerrycan", 10 ],
+      [ "spray_can", 10 ],
       [ "jerrycan_big", 10 ],
       [ "metal_tank", 8 ],
       { "item": "seatbelt", "prob": 8, "count": [ 1, 4 ] },
