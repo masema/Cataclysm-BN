@@ -1,3 +1,6 @@
+#include "../src/map/map.h"
+#include "../src/map/submap.h"
+#include "../src/vehicle/vehicle_part.h"
 #include "active_tile_data.h"
 #include "active_tile_data_def.h"
 #include "avatar.h"
@@ -5,16 +8,13 @@
 #include "catch/catch.hpp"
 #include "distribution_grid.h"
 #include "game.h"
-#include "map.h"
+#include "map/mapbuffer.h"
 #include "map_helpers.h"
-#include "mapbuffer.h"
 #include "overmap.h"
 #include "overmapbuffer.h"
 #include "state_helpers.h"
 #include "stringmaker.h"
-#include "submap.h"
-#include "vehicle.h"
-#include "vehicle_part.h"
+#include "vehicle/vehicle.h"
 
 #include <vector>
 

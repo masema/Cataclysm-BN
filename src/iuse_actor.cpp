@@ -1,23 +1,8 @@
 #include "iuse_actor.h"
 
-#include <algorithm>
-#include <array>
-#include <cctype>
-#include <cmath>
-#include <cstddef>
-#include <functional>
-#include <iterator>
-#include <list>
-#include <memory>
-#include <ret_val.h>
-#include <sstream>
-#include <string>
-#include <utility>
-#include <vector>
-#include <ranges>
-
-#include "action_time_scale.h"
 #include "action.h"
+#include "action_time_scale.h"
+#include "active_tile_data_def.h"
 #include "activity_handlers.h"
 #include "addiction.h"
 #include "ammo.h"
@@ -29,17 +14,16 @@
 #include "bodypart.h"
 #include "cached_options.h"
 #include "calendar.h"
-#include "catalua.h"
-#include "catalua_hooks.h"
-#include "catalua_sol.h"
 #include "cata_utility.h"
+#include "catalua_hooks.h"
 #include "catalua_icallback_actor.h"
+#include "catalua_sol.h"
 #include "character.h"
 #include "character_functions.h"
 #include "character_id.h"
+#include "cloning_utils.h"
 #include "clothing_mod.h"
 #include "crafting.h"
-#include "active_tile_data_def.h"
 #include "creature.h"
 #include "debug.h"
 #include "dimension_info.h"
@@ -47,7 +31,7 @@
 #include "enum_conversions.h"
 #include "enums.h"
 #include "explosion.h"
-#include "field_type.h"
+#include "faction.h"
 #include "flag.h"
 #include "flat_set.h"
 #include "game.h"
@@ -66,11 +50,13 @@
 #include "line.h"
 #include "locations.h"
 #include "magic/magic.h"
-#include "map.h"
-#include "map_iterator.h"
-#include "map_selector.h"
+#include "map/field_type.h"
+#include "map/map.h"
+#include "map/map_selector.h"
+#include "map/mapdata.h"
+#include "map/submap_load_manager.h"
 #include "map/utils/map_utils.h"
-#include "mapdata.h"
+#include "map_iterator.h"
 #include "material.h"
 #include "memory_fast.h"
 #include "messages.h"
@@ -94,11 +80,9 @@
 #include "rng.h"
 #include "skill.h"
 #include "sounds.h"
-#include "cloning_utils.h"
 #include "string_formatter.h"
-#include "string_utils.h"
 #include "string_input_popup.h"
-#include "submap_load_manager.h"
+#include "string_utils.h"
 #include "text_snippets.h"
 #include "translations.h"
 #include "trap.h"
@@ -107,17 +91,33 @@
 #include "uistate.h"
 #include "units_utility.h"
 #include "value_ptr.h"
-#include "vehicle.h"
-#include "vehicle_part.h"
-#include "vehicle_selector.h"
+#include "vehicle/veh_type.h"
+#include "vehicle/vehicle.h"
+#include "vehicle/vehicle_part.h"
+#include "vehicle/vehicle_selector.h"
+#include "vehicle/vpart_position.h"
+#include "vehicle/vpart_range.h"
 #include "visitable.h"
 #include "vitamin.h"
-#include "vpart_position.h"
-#include "vpart_range.h"
-#include "veh_type.h"
-#include "weather.h"
+#include "weather/weather.h"
+#include "world.h"
 #include "world_type.h"
-#include "faction.h"
+
+#include <algorithm>
+#include <array>
+#include <cctype>
+#include <cmath>
+#include <cstddef>
+#include <functional>
+#include <iterator>
+#include <list>
+#include <memory>
+#include <ranges>
+#include <ret_val.h>
+#include <sstream>
+#include <string>
+#include <utility>
+#include <vector>
 
 static const activity_id ACT_FIRSTAID( "ACT_FIRSTAID" );
 static const activity_id ACT_HAND_CRANK( "ACT_HAND_CRANK" );
@@ -1251,15 +1251,12 @@ int place_monster_iuse::use( player &p, item &it, bool, const tripoint_bub_ms &p
         newmon.no_extra_death_drops = true;
         it.deactivate();
     }
-    {
-        std::unique_lock lock( cata::lua_lock );
-        cata::run_hooks( "on_creature_spawn", [&]( sol::table & params ) {
-            params["creature"] = &newmon;
-        } );
-        cata::run_hooks( "on_monster_spawn", [&]( sol::table & params ) {
-            params["monster"] = &newmon;
-        } );
-    }
+    cata::run_hooks( "on_creature_spawn", [&]( sol::table & params ) {
+        params["creature"] = &newmon;
+    } );
+    cata::run_hooks( "on_monster_spawn", [&]( sol::table & params ) {
+        params["monster"] = &newmon;
+    } );
     if( place_random ) {
         // place_critter_around returns the same pointer as its parameter (or null)
         // Allow position to be different from the player for tossed or launched items
@@ -7192,6 +7189,10 @@ void iuse_dimension_travel::load( const JsonObject &obj )
 
 int iuse_dimension_travel::use( player &p, item &it, bool, const tripoint_bub_ms &pos ) const
 {
+    if( g->get_active_world()->info->world_save_format == save_format::V1 ) {
+        popup( "Dimensions are currently disfunctional in v1 saves. Please migrate this save to v2 or dont use the feature." );
+        return true;
+    }
     dimension_travel( p, it, pos );
     return need_charges;
 }
@@ -7324,6 +7325,10 @@ void iuse_pocket_dimension::load( const JsonObject &obj )
 
 int iuse_pocket_dimension::use( player &p, item &it, bool, const tripoint_bub_ms & ) const
 {
+    if( g->get_active_world()->info->world_save_format == save_format::V1 ) {
+        popup( "Dimensions are currently disfunctional in v1 saves. Please migrate this save to v2 or dont use the feature." );
+        return true;
+    }
     // If pocket is not initialized, initialize it on first use
     if( !it.pocket_dim.has_value() || !it.pocket_dim->pocket_info.has_value() ||
         !it.pocket_dim->pocket_info->is_initialized ) {

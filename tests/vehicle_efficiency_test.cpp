@@ -1,3 +1,6 @@
+#include "../src/map/map.h"
+#include "../src/vehicle/vehicle_part.h"
+#include "../src/vehicle/vpart_position.h"
 #include "avatar.h"
 #include "bodypart.h"
 #include "calendar.h"
@@ -8,7 +11,6 @@
 #include "item.h"
 #include "itype.h"
 #include "line.h"
-#include "map.h"
 #include "map_helpers.h"
 #include "player_helpers.h"
 #include "state_helpers.h"
@@ -16,11 +18,9 @@
 #include "test_statistics.h"
 #include "type_id.h"
 #include "units.h"
-#include "veh_type.h"
-#include "vehicle.h"
-#include "vehicle_part.h"
-#include "vpart_position.h"
-#include "vpart_range.h"
+#include "vehicle/veh_type.h"
+#include "vehicle/vehicle.h"
+#include "vehicle/vpart_range.h"
 
 #include <algorithm>
 #include <cmath>

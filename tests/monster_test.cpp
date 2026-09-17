@@ -1,13 +1,15 @@
+#include "../src/map/map.h"
+#include "../src/vehicle/vehicle_part.h"
+#include "../src/vehicle/vpart_position.h"
 #include "action_time_scale.h"
 #include "avatar.h"
 #include "catch/catch.hpp"
 #include "coordinates.h"
-#include "field_type.h"
 #include "game.h"
 #include "game_constants.h"
 #include "item.h"
 #include "line.h"
-#include "map.h"
+#include "map/field_type.h"
 #include "map/utils/map_functions.h"
 #include "map_helpers.h"
 #include "monattack.h"
@@ -20,9 +22,7 @@
 #include "state_helpers.h"
 #include "test_statistics.h"
 #include "type_id.h"
-#include "vehicle.h"
-#include "vehicle_part.h"
-#include "vpart_position.h"
+#include "vehicle/vehicle.h"
 
 #include <algorithm>
 #include <cmath>
@@ -517,7 +517,7 @@ TEST_CASE("monster_speed_trig", "[speed][.][!mayfail]") {
     monster_check();
 }
 
-TEST_CASE("monster_move_through_vehicle_holes") {
+TEST_CASE("monster_move_through_vehicle_holes", "[.][monster]") {
     clear_all_state();
     move_player_out_of_the_way();
     tripoint_bub_ms origin(60, 60, 0);

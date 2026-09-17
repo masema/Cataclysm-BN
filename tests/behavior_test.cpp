@@ -1,9 +1,9 @@
+#include "../src/map/map.h"
 #include "behavior.h"
 #include "behavior_strategy.h"
 #include "catch/catch.hpp"
 #include "character_oracle.h"
 #include "item.h"
-#include "map.h"
 #include "map_helpers.h"
 #include "monster.h"
 #include "monster_oracle.h"
@@ -13,7 +13,7 @@
 #include "player_helpers.h"
 #include "state_helpers.h"
 #include "string_id.h"
-#include "weather.h"
+#include "weather/weather.h"
 
 #include <memory>
 #include <string>

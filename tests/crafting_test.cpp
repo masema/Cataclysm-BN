@@ -1,3 +1,5 @@
+#include "../src/map/map.h"
+#include "../src/vehicle/vehicle_part.h"
 #include "activity_actor_definitions.h"
 #include "avatar.h"
 #include "avatar_functions.h"
@@ -14,7 +16,6 @@
 #include "item.h"
 #include "itype.h"
 #include "iuse.h"
-#include "map.h"
 #include "map_helpers.h"
 #include "npc.h"
 #include "options_helpers.h"
@@ -29,9 +30,8 @@
 #include "string_id.h"
 #include "type_id.h"
 #include "value_ptr.h"
-#include "vehicle.h"
-#include "vehicle_part.h"
-#include "weather.h"
+#include "vehicle/vehicle.h"
+#include "weather/weather.h"
 
 #include <algorithm>
 #include <climits>

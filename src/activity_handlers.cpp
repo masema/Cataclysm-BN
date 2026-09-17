@@ -44,9 +44,8 @@
 #include "event.h"
 #include "event_bus.h"
 #include "fault.h"
-#include "field_type.h"
-#include "fstream_utils.h"
 #include "flag.h"
+#include "fstream_utils.h"
 #include "game.h"
 #include "game_constants.h"
 #include "game_inventory.h"
@@ -63,11 +62,13 @@
 #include "iuse_actor.h"
 #include "line.h"
 #include "magic/magic.h"
-#include "material.h"
-#include "map.h"
+#include "magic/spell_targeting.h"
+#include "map/field_type.h"
+#include "map/map.h"
+#include "map/mapdata.h"
 #include "map_iterator.h"
-#include "mapdata.h"
 #include "martialarts.h"
+#include "material.h"
 #include "messages.h"
 #include "mongroup.h"
 #include "monster.h"
@@ -87,19 +88,18 @@
 #include "rng.h"
 #include "skill.h"
 #include "sounds.h"
-#include "units.h"
-#include "magic/spell_targeting.h"
 #include "string_formatter.h"
 #include "string_id.h"
+#include "string_utils.h"
 #include "text_snippets.h"
 #include "translations.h"
 #include "type_id.h"
 #include "ui.h"
-#include "veh_interact.h"
-#include "vehicle.h"
-#include "vehicle_part.h"
-#include "vpart_position.h"
-#include "string_utils.h"
+#include "units.h"
+#include "vehicle/veh_interact.h"
+#include "vehicle/vehicle.h"
+#include "vehicle/vehicle_part.h"
+#include "vehicle/vpart_position.h"
 
 enum creature_size : int;
 
@@ -1758,8 +1758,8 @@ void activity_handlers::forage_finish( player_activity *act, player *p )
 void activity_handlers::generic_game_do_turn( player_activity * /*act*/, player *p )
 {
     if( action_time_scale::once_every_this_tick( 1_minutes ) ) {
-        // So 30 points per play
-        p->add_morale( MORALE_GAME, 2, 60, 2_hours, 30_minutes, true );
+        // So 20 points per play
+        p->add_morale( MORALE_GAME, 2, 20, 3_hours, 30_minutes, true );
         return;
     }
 }

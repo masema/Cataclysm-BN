@@ -1,20 +1,12 @@
 #include "mapgen_constructor.h"
 
-#include <algorithm>
-#include <climits>
-#include <memory>
-#include <ranges>
-
 #include "artifact.h"
-#include "catalua.h"
 #include "catalua_hooks.h"
 #include "catalua_sol.h"
 #include "computer.h"
 #include "coordinates.h"
 #include "data_vars.h"
 #include "debug.h"
-#include "field.h"
-#include "field_type.h"
 #include "flag.h"
 #include "game.h"
 #include "game_constants.h"
@@ -23,8 +15,11 @@
 #include "item_factory.h"
 #include "item_group.h"
 #include "line.h"
-#include "mapbuffer.h"
-#include "mapdata.h"
+#include "map/field.h"
+#include "map/field_type.h"
+#include "map/mapbuffer.h"
+#include "map/mapdata.h"
+#include "map/submap.h"
 #include "mapgendata.h"
 #include "mongroup.h"
 #include "npc.h"
@@ -34,17 +29,21 @@
 #include "point.h"
 #include "point_float.h"
 #include "rng.h"
-#include "submap.h"
 #include "text_snippets.h"
 #include "thread_pool.h"
 #include "trap.h"
 #include "units_utility.h"
-#include "vehicle.h"
-#include "vehicle_group.h"
-#include "vehicle_part.h"
-#include "vpart_position.h"
-#include "vpart_range.h"
-#include "veh_type.h"
+#include "vehicle/veh_type.h"
+#include "vehicle/vehicle.h"
+#include "vehicle/vehicle_group.h"
+#include "vehicle/vehicle_part.h"
+#include "vehicle/vpart_position.h"
+#include "vehicle/vpart_range.h"
+
+#include <algorithm>
+#include <climits>
+#include <memory>
+#include <ranges>
 
 static const trait_id trait_NPC_STATIC_NPC( "NPC_STATIC_NPC" );
 static const mongroup_id GROUP_BREATHER( "GROUP_BREATHER" );
@@ -1213,7 +1212,6 @@ auto mapgen_constructor::place_npc( const point_omt_ms &p, const string_id<npc_t
     temp->toggle_trait( trait_NPC_STATIC_NPC );
     get_overmapbuffer( get_bound_dimension() ).insert_npc( temp );
     if( !is_pool_worker_thread() ) {
-        std::unique_lock lock( cata::lua_lock );
         cata::run_hooks( "on_creature_spawn", [&]( sol::table & params ) {
             params["creature"] = temp.get();
         } );
